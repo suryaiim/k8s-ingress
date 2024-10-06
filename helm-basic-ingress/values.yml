@@ -1,0 +1,15 @@
+namespace: app-dev
+
+app:
+  name: app1-nginx
+
+service:
+  name: app1-nginx-clusterip-service
+
+deployment:
+  name: app1-nginx-deployment
+  replicas: 1
+  image: stacksimplify/kube-nginxapp1:1.0.0
+
+ingress:
+  name: nginxapp1-ingress-service
