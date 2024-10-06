@@ -4,7 +4,8 @@ trigger:
       - main  # or whatever branch you want to trigger on
 
 pool:
-  vmImage: 'ubuntu-latest'
+  #vmImage: 'ubuntu-latest'
+  name: 'Azure Pipelines'
 
 
 
