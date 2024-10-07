@@ -43,4 +43,4 @@ jobs:
     inputs:
       kubernetesServiceConnection: 'aks-connection'
       namespace: vault
-      manifests: $(bake.manifestsBundle)
+      manifests: '$(Build.SourcesDirectory)/vault-ingress/vault-ingress.yaml'
