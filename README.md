@@ -62,7 +62,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
     --set controller.nodeSelector."kubernetes\.io/os"=linux \
     --set defaultBackend.nodeSelector."kubernetes\.io/os"=linux \
     --set controller.service.externalTrafficPolicy=Local \
-    --set controller.service.loadBalancerIP="40.123.236.162"     
+    --set controller.service.loadBalancerIP="4.161.47.157"     
 
 
 # List Services with labels

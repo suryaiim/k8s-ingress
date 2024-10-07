@@ -2,19 +2,24 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginxapp1-ingress-service
-  #annotations:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
     #kubernetes.io/ingress.class: nginx  
 spec:
   ingressClassName: nginx
   rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: app1-nginx-clusterip-service
-                port: 
-                  number: 80
-      
+  - host: learn.practicecloud.co
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: app1-nginx-clusterip-service
+              port: 
+                number: 80
+  tls:
+  - hosts:   
+    - learn.practicecloud.co
+    secretName: myingress-cert
 
