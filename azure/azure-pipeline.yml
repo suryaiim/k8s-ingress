@@ -37,5 +37,5 @@ jobs:
       #valueFile: '$(Build.SourcesDirectory)/values.yaml'
       valueFile: '$(Build.SourcesDirectory)/values.yaml'
       #install: true
-      arguments: '--install --set controller.replicaCount=2 --set controller.nodeSelector."kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."kubernetes\.io/os"=linux --set controller.service.externalTrafficPolicy=Local --set controller.service.loadBalancerIP=20.233.68.178'
+      arguments: '--install --create-namespace --set controller.replicaCount=2 --set controller.nodeSelector."kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."kubernetes\.io/os"=linux --set controller.service.externalTrafficPolicy=Local --set controller.service.loadBalancerIP=20.233.26.176'
 
