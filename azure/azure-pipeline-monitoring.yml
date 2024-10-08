@@ -41,4 +41,4 @@ jobs:
     inputs:
       kubernetesServiceConnection: 'aks-connection'
       namespace: vault
-      manifests: '$(Build.SourcesDirectory)/monitoring/ingress.yaml'
+      manifests: '$(Build.SourcesDirectory)/monitoring/ingress.yml'
