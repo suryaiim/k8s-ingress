@@ -40,5 +40,5 @@ jobs:
     displayName: Deploy K8s manifests
     inputs:
       kubernetesServiceConnection: 'aks-connection'
-      namespace: vault
+      namespace: monitoring
       manifests: '$(Build.SourcesDirectory)/monitoring/ingress.yml'
